@@ -39,6 +39,7 @@ import prepsMessageToken, {
 import compilationRequest, {
   CompilationRequestState
 } from 'app/entities/compilation-request/compilation-request.reducer';
+import prepaymentBalance, { PrepaymentBalanceState } from 'app/balanceQuery/prepayment-balance.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -58,6 +59,7 @@ export interface IRootState {
   readonly prepsFileUpload: PrepsFileUploadState;
   readonly prepsMessageToken: PrepsMessageTokenState;
   readonly compilationRequest: CompilationRequestState;
+  readonly prepaymentBalance: PrepaymentBalanceState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -79,6 +81,7 @@ const rootReducer = combineReducers<IRootState>({
   prepsFileUpload,
   prepsMessageToken,
   compilationRequest,
+  prepaymentBalance,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 });
